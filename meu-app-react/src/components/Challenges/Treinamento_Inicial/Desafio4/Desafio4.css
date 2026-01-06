@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5eded;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 50px auto;
+    /* centraliza vertical e horizontalmente */
+    padding:100px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f9bf8f, #fee9d7);
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título */
+.page h1 {
+    font-size: 2.9rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Descrição do desafio */
+.page p {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* Mensagem de sucesso/erro */
+.message {
+    font-weight: bold;
+    color: #006400;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Formulário */
+.task-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.task-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.task-form button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff7f50;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.task-form button:hover {
+    background-color: #e0663f;
+}
+
+/* Botão Ver/Ocultar */
+.toggle-btn {
+    display: inline-block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffa500;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #e69500;
+}
+
+/* Lista de tarefas */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de apagar */
+li button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ff3333;
+    transition: color 0.2s ease;
+}
+
+li button:hover {
+    color: #cc0000;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .task-form {
+        flex-direction: column;
+    }
+
+    .task-form button {
+        margin-left: 0;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    .page {
+        padding: 20px;
+        margin: 20px;
+    }
+}

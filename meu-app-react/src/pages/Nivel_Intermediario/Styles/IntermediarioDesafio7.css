@@ -1,0 +1,52 @@
+.desafio7-page {
+    min-height: 100vh;
+    width: 100%;
+
+    /* 1. A Cor de Fundo Base (Preto Profundo) */
+    background-color: #050505;
+
+    /* 2. O Efeito dos Pontinhos Mágicos */
+    /* Cria um círculo pequeno de 1.5px com cor Vermelho Escuro */
+    /* O resto do espaço fica transparente (mostrando o preto do fundo) */
+    background-image: radial-gradient(#3a0000 1.5px, transparent 1.5px);
+
+    /* 3. A Distância entre os pontinhos */
+    background-size: 30px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+/* --- Estilização do Título e Subtítulo --- */
+.desafio7-title {
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    z-index: 1;
+    /* Garante que fique acima do fundo */
+}
+
+.desafio7-title h1 {
+    color: #ffffff;
+    /* Título Branco para contraste máximo */
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    /* Um leve brilho vermelho no texto */
+    text-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4);
+}
+
+.desafio7-title p {
+    color: #FF0000;
+    /* Subtítulo Vermelho Neon */
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,30 @@
+/* 1. Garante que o HTML e BODY ocupem tudo sem margens */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* 2. O PULO DO GATO: Destrava a div #root */
+#root {
+    width: 100%;
+    height: 100%;
+
+    /* Os templates Vite costumam ter 'max-width: 1280px' e 'margin: 0 auto' aqui.
+       Nós vamos anular isso: */
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    /* Remove alinhamento de texto centralizado padrão */
+}
+
+/* Reset básico universal */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}

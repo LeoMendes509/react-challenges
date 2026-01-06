@@ -1,0 +1,212 @@
+/* Layout base centralizado */
+.desafio8-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background-color: #f0f2f5;
+}
+
+/* Card principal inspirado na referência */
+.p8-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Cabeçalho funcional */
+.p8-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.p8-header-info {
+    display: flex;
+    align-items: center;
+}
+
+.p8-blue-accent {
+    width: 5px;
+    height: 20px;
+    background-color: #339af0;
+    border-radius: 3px;
+    margin-right: 12px;
+}
+
+.p8-header-info p {
+    font-weight: 600;
+    color: #495057;
+    margin: 0;
+}
+
+/* Corpo e Seções */
+.p8-body {
+    padding: 25px;
+}
+
+.p8-section {
+    margin-bottom: 25px;
+}
+
+.p8-section label {
+    display: block;
+    font-size: 13px;
+    color: #868e96;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Barra de Busca */
+.p8-search-container {
+    position: relative;
+}
+
+.p8-search-container input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    outline: none;
+}
+
+.p8-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+}
+
+/* Listagem de Categorias (Estilo Radio customizado) */
+.p8-category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.p8-category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #495057;
+}
+
+/* Seção de Preço */
+.p8-price-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p8-price-tag {
+    background-color: #343a40;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Botões e Footer */
+.p8-footer {
+    padding: 20px 25px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.p8-btn-apply {
+    background-color: #339af0;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.p8-btn-reset {
+    background: none;
+    border: 1px solid #dee2e6;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    color: #495057;
+}
+
+.p8-close-btn {
+    background: #f8f9fa;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: #adb5bd;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Visualização de Resultados */
+.p8-results-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10 px 25px;
+}
+
+.p8-product-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.p8-row-main strong {
+    font-size: 14px;
+    color: #343a40;
+}
+
+.p8-row-main span {
+    font-size: 11px;
+    color: #adb5bd;
+}
+
+.p8-out {
+    color: #fa5252;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Animações */
+.p8-animation-in {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

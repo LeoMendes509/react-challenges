@@ -1,0 +1,63 @@
+/* Container principal do accordion */
+.accordion {
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 12px;
+    background-color: #F9E7B2;
+    padding: 16px;
+}
+
+/* Cada item do accordion */
+.accordion-item {
+    background-color: #DDC57A;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+/* Cabeçalho clicável */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #CE7E5A;
+    color: #ffffff;
+}
+
+/* Efeito visual ao passar o mouse */
+.accordion-header:hover {
+    opacity: 0.9;
+}
+
+/* Ícone de seta */
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Rotação da seta quando aberto */
+.accordion-icon.open {
+    transform: rotate(180deg);
+}
+
+/* Área da resposta */
+.accordion-content {
+    padding: 0 16px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #F9E7B2;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Conteúdo visível quando aberto */
+.accordion-content.open {
+    max-height: 200px;
+    padding: 16px;
+}
+
+/* Destaque visual do item aberto */
+.accordion-item.open .accordion-header {
+    background-color: #D34E4E;
+}

@@ -1,0 +1,82 @@
+/* O Cartão do Contador */
+.counter-card {
+    /* Fundo levemente cinza para destacar o preto da página, 
+       ou pode usar 'transparent' se quiser só a borda */
+    background-color: #111111;
+
+    /* A BORDA VERMELHA pedida */
+    border: 3px solid #CF0F47;
+    border-radius: 20px;
+    padding: 50px 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    /* Efeito de brilho (Glow) vermelho suave atrás */
+    box-shadow: 0 0 25px rgba(207, 15, 71, 0.25);
+
+    min-width: 320px;
+}
+
+/* Título "Counter" dentro do cartão */
+.counter-card h2 {
+    color: #FFDEDE;
+    /* Rosa pálido */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+/* O Número do contador */
+.count-value {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #FF0B55;
+    /* Rosa Neon Vibrante */
+    margin: 10px 0;
+    text-shadow: 0 0 15px rgba(255, 11, 85, 0.4);
+}
+
+/* Container dos botões */
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Estilo dos Botões */
+.buttons button {
+    background: transparent;
+    border: 2px solid #CF0F47;
+    /* Borda Vermelha */
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efeito Hover nos Botões */
+.buttons button:hover {
+    background-color: #CF0F47;
+    box-shadow: 0 0 15px #CF0F47;
+    transform: scale(1.05);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    .counter-card {
+        padding: 30px 20px;
+        min-width: 280px;
+        width: 100%;
+    }
+
+    .count-value {
+        font-size: 4rem;
+    }
+}

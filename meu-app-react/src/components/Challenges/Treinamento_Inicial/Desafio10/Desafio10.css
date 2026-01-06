@@ -1,0 +1,473 @@
+/* --- LAYOUT GERAL --- */
+/* Configuração do container principal e fonte padrão */
+.container-desafio10 {
+    font-family: 'Inter', sans-serif;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- CABEÇALHO --- */
+/* Alinhamento do título e botão principal */
+.header-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header-page h2 {
+    color: #111827;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Botão principal de adicionar novo contato */
+.btn-add {
+    background-color: #4f46e5;
+    /* Azul principal */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #4338ca;
+}
+
+/* --- BARRA DE BUSCA --- */
+.search-section {
+    margin-bottom: 20px;
+}
+
+.search-container {
+    position: relative;
+    max-width: 400px;
+}
+
+/* Input de busca com espaço interno para o ícone */
+.search-input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.search-input:focus {
+    border-color: #4f46e5;
+    background-color: #fff;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+/* --- FILTRO DE CATEGORIAS --- */
+/* Container dos botões de filtro */
+.category-filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilo padrão do botão de categoria */
+.btn-category {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    background-color: #fff;
+    color: #374151;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+/* Estilo do botão quando está selecionado (Ativo) */
+.btn-category.active {
+    background-color: #4f46e5;
+    color: #fff;
+    border-color: #4f46e5;
+}
+
+.btn-category:hover:not(.active) {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+}
+
+/* --- TABELA DE CONTATOS --- */
+.list-section {
+    margin-top: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+/* Estrutura base da tabela */
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* Cabeçalho da tabela */
+.contacts-table th {
+    background-color: #f9fafb;
+    padding: 12px 16px;
+    color: #6b7280;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Linhas da tabela */
+.contact-row {
+    border-bottom: 1px solid #f3f4f6;
+    transition: background-color 0.1s;
+}
+
+.contact-row:hover {
+    background-color: #f9fafb;
+}
+
+.contact-row td {
+    padding: 16px;
+    color: #374151;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+/* Estilo do Avatar (Círculo) e Nome */
+.contact-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-name {
+    font-weight: 600;
+    color: #111827;
+}
+
+.contact-role {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* --- BOTÕES DE AÇÃO (EDITAR E DELETAR) --- */
+/* Estilo base compartilhado para os ícones */
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 6px;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: all 0.2s;
+    margin: 0 2px;
+}
+
+/* Estilo específico para deletar (Vermelho claro no hover) */
+.btn-icon.delete:hover {
+    opacity: 1;
+    background-color: #fee2e2;
+}
+
+/* Estilo específico para editar (Azul claro no hover) - NOVO */
+.btn-icon.edit:hover {
+    opacity: 1;
+    background-color: #e0e7ff;
+}
+
+/* --- MODAL (OVERLAY E CONTEÚDO) --- */
+/* Fundo escuro transparente */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Janela branca centralizada */
+.modal-content {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: relative;
+    animation: slideUp 0.4s ease-out;
+}
+
+.close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #111827;
+}
+
+/* --- FORMULÁRIO --- */
+.contact-form h3 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #111827;
+    font-size: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+/* Botões do formulário */
+.btn-cancel {
+    background: white;
+    border: 1px solid #d1d5db;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #374151;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background-color: #f9fafb;
+}
+
+.btn-save {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #4338ca;
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- CONTAINER DA TABELA --- */
+.list-section {
+    margin-top: 20px;
+}
+
+/* Container com scroll horizontal para responsividade */
+.table-container {
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+/* Estrutura base da tabela ocupando 100% da largura */
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* --- CABEÇALHO DA TABELA --- */
+.contacts-table th {
+    background-color: #f9fafb;
+    padding: 12px 16px;
+    color: #6b7280;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* --- LINHAS E CÉLULAS --- */
+.contact-row {
+    border-bottom: 1px solid #f3f4f6;
+    transition: background-color 0.1s;
+}
+
+/* Efeito visual ao passar o mouse sobre a linha */
+.contact-row:hover {
+    background-color: #f9fafb;
+}
+
+.contact-row td {
+    padding: 16px;
+    color: #374151;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+/* --- DETALHES DO CONTATO (AVATAR + NOME) --- */
+.contact-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Círculo com a inicial do nome */
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-name {
+    font-weight: 600;
+    color: #111827;
+}
+
+.contact-role {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* --- BOTÕES DE AÇÃO (LÁPIS E LIXEIRA) --- */
+.contact-actions {
+    white-space: nowrap;
+    /* Evita quebra de linha entre os botões */
+}
+
+/* Estilo base compartilhado para os ícones */
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 6px;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: all 0.2s;
+    margin: 0 4px;
+}
+
+/* Hover Vermelho para Deletar */
+.btn-icon.delete:hover {
+    opacity: 1;
+    background-color: #fee2e2;
+}
+
+/* Hover Azul para Editar */
+.btn-icon.edit:hover {
+    opacity: 1;
+    background-color: #e0e7ff;
+}

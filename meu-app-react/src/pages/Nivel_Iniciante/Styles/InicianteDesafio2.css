@@ -1,0 +1,30 @@
+.iniciante-desafio2-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #414141;
+    /* Seu cinza escuro */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.gallery-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    /* Alinha a base dos cards de tamanhos diferentes */
+}
+
+.page-title {
+    color: #EC625F;
+    font-size: 2.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

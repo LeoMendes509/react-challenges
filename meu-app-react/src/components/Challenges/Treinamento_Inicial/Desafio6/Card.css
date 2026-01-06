@@ -1,0 +1,58 @@
+/* --- Estilos do Container (Página) --- */
+.desafio6-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+    min-height: 100vh;
+}
+
+.ui-card {
+    display: flex;
+    flex-direction: column;
+    /* Conteúdo um embaixo do outro */
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+    padding: 24px;
+    /* Espaço interno equilibrado */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Cores específicas para cada variante */
+.ui-card.default {
+    background-color: #F9CFF2;
+}
+
+/* Rosa */
+.ui-card.primary {
+    background-color: #EFE9E7;
+}
+
+/* Cinza claro */
+.ui-card.danger {
+    background-color: #FFB3B3;
+}
+
+/* Vermelho suave (Perigo) */
+
+.ui-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.ui-card button {
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    background: #333;
+    color: white;
+}

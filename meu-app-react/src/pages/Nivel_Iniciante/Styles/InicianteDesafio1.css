@@ -1,0 +1,12 @@
+.iniciante-desafio1-container {
+    width: 100%;
+    min-height: 100vh;
+
+    /* Usando um dos seus cinzas no fundo da página para destacar o card branco */
+    background-color: #414141;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}

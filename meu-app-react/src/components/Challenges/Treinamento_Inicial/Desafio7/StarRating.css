@@ -1,0 +1,206 @@
+/* Container principal que centraliza todo o conteúdo na tela e define o fundo */
+.desafio7-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 60px;
+    background-color: #f0ebea;
+}
+
+/* Estilização do título e ajuste de posição para o topo da página */
+.desafio7-container h1 {
+    margin-top: -100px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3d3d3d;
+}
+
+/* Agrupador do componente que define as variáveis de cor para sincronizar a face e a boca */
+.star-rating-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    --color-1: #FF7070;
+    --color-2: #FFB370;
+    --color-3: #ffffb3;
+    --color-4: #ffff80;
+    --color-5: #ffff4c;
+    --face-bg: white;
+}
+
+/* Mapeamento das classes de rating para atualizar a variável de cor dinamicamente */
+.rating-1 {
+    --face-bg: var(--color-1);
+}
+
+.rating-2 {
+    --face-bg: var(--color-2);
+}
+
+.rating-3 {
+    --face-bg: var(--color-3);
+}
+
+.rating-4 {
+    --face-bg: var(--color-4);
+}
+
+.rating-5 {
+    --face-bg: var(--color-5);
+}
+
+/* Estrutura circular do rosto que utiliza a variável de cor para uma transição suave */
+.face {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: var(--face-bg);
+    border: 8px solid #ccc;
+    border-radius: 100%;
+    transition: background-color 0.4s ease, border-color 0.4s;
+}
+
+/* Posicionamento e estilização dos olhos do personagem */
+.face i {
+    position: absolute;
+    top: 40%;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background: #ccc;
+    transition: background 0.4s;
+}
+
+/* Define a posição horizontal do olho esquerdo e direito */
+.face i:nth-child(1) {
+    left: 30%;
+}
+
+.face i:nth-child(2) {
+    right: 30%;
+}
+
+/* Estrutura base da boca criada a partir de um círculo com borda */
+.face u {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border: 8px solid #ccc;
+    border-radius: 100%;
+    transition: all 0.4s ease;
+}
+
+/* Elemento de cobertura que sincroniza a cor com o rosto e usa opacidade para suavizar a transição */
+.face u .cover {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 72px;
+    height: 36px;
+    background-color: var(--face-bg);
+    opacity: 1;
+    transition: background-color 0.4s ease, opacity 0.4s;
+}
+
+/* Estilos aplicados quando o usuário interage (cor da borda e animação de impacto) */
+.rating-1,
+.rating-2,
+.rating-3,
+.rating-4,
+.rating-5 {
+    border-color: #3d3d3d;
+    animation: wobble 0.6s ease-out;
+}
+
+/* Define a cor preta para os detalhes internos da face quando há uma nota selecionada */
+.rating-1 i,
+.rating-2 i,
+.rating-3 i,
+.rating-4 i,
+.rating-5 i {
+    background: #3d3d3d;
+}
+
+.rating-1 u,
+.rating-2 u,
+.rating-3 u,
+.rating-4 u,
+.rating-5 u {
+    border-color: #3d3d3d;
+}
+
+/* Lógica de expressão para Nota 1: Rosto vermelho e boca invertida (triste) */
+.rating-1 u {
+    transform: translateX(-50%) rotate(180deg);
+    bottom: 10%;
+}
+
+/* Lógica de expressão para Nota 2: Rosto laranja e boca levemente triste */
+.rating-2 u {
+    transform: translateX(-50%) rotate(180deg);
+    bottom: 15%;
+    width: 40px;
+}
+
+/* Lógica de expressão para Nota 3: Rosto neutro e boca transformada em um traço reto */
+.rating-3 u {
+    width: 50px;
+    height: 8px;
+    background: #3d3d3d;
+    border: none;
+    transform: translateX(-50%) translateY(10px);
+}
+
+/* Remove a cobertura da boca na nota 3 para permitir o formato de traço */
+.rating-3 u .cover {
+    opacity: 0;
+}
+
+/* Lógica de expressão para Nota 4: Rosto amarelo e boca em formato de sorriso padrão */
+.rating-4 u {
+    bottom: 20%;
+}
+
+/* Lógica de expressão para Nota 5: Rosto amarelo vivo e boca totalmente aberta (sorrisão) */
+.rating-5 u .cover {
+    opacity: 0;
+}
+
+/* Estilização das estrelas com tamanho aumentado e efeito de zoom no hover */
+.star-icon {
+    font-size: 60px;
+    cursor: pointer;
+    color: #ccc;
+    transition: transform 0.2s, color 0.2s;
+}
+
+/* Aplica um leve aumento na estrela quando o mouse passa por cima */
+.star-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Cor dourada aplicada às estrelas que estão dentro do valor selecionado ou hover */
+.star-icon.active {
+    color: #FFDB19;
+}
+
+/* Definição da animação de balanço (feedback visual) ao trocar de nota */
+@keyframes wobble {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

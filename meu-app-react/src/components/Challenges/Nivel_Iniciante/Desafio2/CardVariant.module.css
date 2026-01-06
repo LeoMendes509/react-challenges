@@ -1,0 +1,128 @@
+/* --- ESTILOS BASE (Comum a todos) --- */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+    border: 1px solid #e5e5e5;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+    margin: 0;
+    font-weight: 800;
+}
+
+.description {
+    color: #525252;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.button {
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+    /* Empurra o botão para o final */
+}
+
+/* --- VARIANTES DE COR --- */
+
+/* Primary: Sua cor Coral (#EC625F) */
+.primary {
+    border-top: 5px solid #EC625F;
+}
+
+.primary .title {
+    color: #EC625F;
+}
+
+.primary .button {
+    background-color: #EC625F;
+}
+
+/* Secondary: Seu Cinza Escuro (#313131) */
+.secondary {
+    border-top: 5px solid #313131;
+}
+
+.secondary .title {
+    color: #313131;
+}
+
+.secondary .button {
+    background-color: #313131;
+}
+
+/* Danger: Um Vermelho Alerta (Padrão de erro) */
+.danger {
+    border-top: 5px solid #dc2626;
+}
+
+.danger .title {
+    color: #dc2626;
+}
+
+.danger .button {
+    background-color: #dc2626;
+}
+
+
+/* --- VARIANTES DE TAMANHO --- */
+
+.small {
+    width: 200px;
+    padding: 15px;
+    font-size: 0.85rem;
+}
+
+.small .title {
+    font-size: 1.1rem;
+}
+
+.small .button {
+    padding: 8px;
+    font-size: 0.8rem;
+}
+
+.medium {
+    width: 300px;
+    padding: 25px;
+    font-size: 1rem;
+}
+
+.medium .title {
+    font-size: 1.5rem;
+}
+
+.medium .button {
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.large {
+    width: 400px;
+    padding: 40px;
+    font-size: 1.1rem;
+}
+
+.large .title {
+    font-size: 2rem;
+}
+
+.large .button {
+    padding: 16px;
+    font-size: 1.2rem;
+}

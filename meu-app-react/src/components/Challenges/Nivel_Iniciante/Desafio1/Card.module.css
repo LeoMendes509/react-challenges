@@ -1,0 +1,67 @@
+/* Card.module.css */
+
+.card {
+    /* Requisito: Fundo Branco */
+    background-color: #ffffff;
+
+    /* Bordas e Sombras usando seus tons */
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(49, 49, 49, 0.1);
+    /* Sombra suave baseada no seu cinza #313131 */
+
+    padding: 30px;
+    max-width: 320px;
+    font-family: 'Inter', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(236, 98, 95, 0.15);
+    /* Sombra avermelhada suave no hover */
+}
+
+/* Título: Cor Primária (Seu Coral/Vermelho) */
+.title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #EC625F;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* Descrição: Cor Cinza (O tom mais claro da sua paleta para texto) */
+.description {
+    font-size: 1rem;
+    color: #525252;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Botão: Fundo escuro para contraste */
+.button {
+    margin-top: 15px;
+    background-color: #313131;
+    /* Cinza mais escuro */
+    color: white;
+
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover do Botão: Muda para a cor primária ou o tom intermediário */
+.button:hover {
+    background-color: #EC625F;
+    /* Fica Coral no hover */
+    /* Ou poderia ser #414141 se quisesse manter cinza */
+}

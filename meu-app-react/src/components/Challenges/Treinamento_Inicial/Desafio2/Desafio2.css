@@ -1,0 +1,29 @@
+/* Container que ocupa a tela INTEIRA */
+.desafio2-container {
+    width: 100%;
+    min-height: 100vh;
+    /* Garante que vá até o fim da tela embaixo */
+    background-color: #000000;
+    /* Fundo PRETO total */
+
+    /* Centraliza o conteúdo no meio da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* Espaço entre o título e o cartão */
+
+    padding: 20px;
+    /* Margem de segurança para mobile */
+}
+
+/* Estilo do Título (Branco como pedido) */
+.desafio2-container h1 {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
