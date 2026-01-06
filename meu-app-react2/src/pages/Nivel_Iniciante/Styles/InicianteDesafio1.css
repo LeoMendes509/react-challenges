@@ -1,0 +1,25 @@
+.desafio1-page {
+    /* Ocupa a tela inteira */
+    min-height: 100vh;
+    width: 100%;
+
+    /* Fundo específico para este desafio (Preto com leve gradiente) */
+    background: radial-gradient(circle at center, #1a0509 0%, #000000 100%);
+
+    /* Centraliza o componente na tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.desafio1-footer {
+    margin-top: 30px;
+    color: #FFDEDE;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    text-align: center;
+    max-width: 600px;
+}

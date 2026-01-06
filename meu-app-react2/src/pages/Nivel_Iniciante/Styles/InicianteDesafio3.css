@@ -1,0 +1,22 @@
+.desafio3-page {
+  min-height: 100vh;
+  width: 100%;
+
+  /* Um degradê mais "tecnológico" usando o Azul da sua paleta */
+  background: linear-gradient(135deg, #f7f7f7 0%, #000000 100%);
+  border-top: 5px solid #5a7acd; /* Borda azul no topo */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.desafio3-footer {
+  margin-top: 40px;
+  color: #f5f2f2;
+  font-size: 0.9rem;
+  opacity: 0.5;
+  text-align: center;
+}
