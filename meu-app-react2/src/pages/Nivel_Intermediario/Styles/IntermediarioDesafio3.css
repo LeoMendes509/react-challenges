@@ -1,0 +1,23 @@
+.yup-form-page {
+  min-height: 100vh;
+  width: 100%;
+
+  /* Fundo Preto Absoluto para o tema Luxo */
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.yup-form-footer {
+  margin-top: 30px;
+  /* Dourado Escuro para o texto discreto */
+  color: #735f32;
+  text-align: center;
+  font-size: 0.85rem;
+  font-family: "Times New Roman", serif; /* Fonte serifada combina com luxo */
+  letter-spacing: 1px;
+}

@@ -1,0 +1,44 @@
+/* Container que cobre a tela inteira */
+.avancado-page {
+  min-height: 100vh;
+  width: 100%;
+
+  /* Fundo Preto/Cinza Profundo (#222831) do tema Dark & Gold */
+  background-color: #222831;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Wrapper para limitar a largura do formulário na tela */
+.avancado-content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avancado-footer {
+  margin-top: 30px;
+  color: #ffd369; /* Texto Dourado */
+  opacity: 0.6;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* Animação suave para troca de steps */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

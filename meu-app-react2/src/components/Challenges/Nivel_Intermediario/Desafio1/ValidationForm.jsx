@@ -132,7 +132,7 @@ const ValidationForm = () => {
     );
   }
 
-  // --- FORMULÁRIO SPLIT SCREEN (DARK MODE) ---
+  // --- FORMULÁRIO SPLIT SCREEN ---
   return (
     <Paper
       elevation={10}

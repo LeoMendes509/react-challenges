@@ -1,0 +1,41 @@
+/* Container Principal (#222831) */
+.avancado-page-vintage {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #222831; /* O tom mais escuro da paleta */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.header-vintage {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-vintage h1 {
+  color: #dfd0b8; /* Creme */
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px; /* Espaçamento elegante */
+  margin: 0;
+  border-bottom: 1px solid #948979; /* Linha sutil abaixo do título */
+  padding-bottom: 10px;
+}
+
+.header-vintage p {
+  color: #948979; /* Bronze */
+  margin-top: 15px;
+  font-family: monospace; /* Fonte técnica */
+  font-size: 1rem;
+}
+
+.form-container-vintage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

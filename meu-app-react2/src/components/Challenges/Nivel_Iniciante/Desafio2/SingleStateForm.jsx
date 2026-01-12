@@ -34,9 +34,9 @@ const SingleStateForm = () => {
         padding: 4,
         maxWidth: 400,
         width: "100%",
-        // USANDO SUA COR: Cinza Escuro para o fundo do cartão
+        // COR: Cinza Escuro para o fundo do cartão
         backgroundColor: "#2B2A2A",
-        // USANDO SUA COR: Off-White para o texto base
+        // COR: Off-White para o texto base
         color: "#F5F2F2",
       }}
     >
@@ -101,7 +101,7 @@ const SingleStateForm = () => {
             disabled={!formData.email || !formData.password}
             sx={{
               marginTop: 2,
-              // USANDO SUA COR: Laranja para destaque
+              // COR: Laranja para destaque
               backgroundColor: "#FEB05D",
               color: "#2B2A2A", // Texto do botão escuro para contraste
               fontWeight: "bold",

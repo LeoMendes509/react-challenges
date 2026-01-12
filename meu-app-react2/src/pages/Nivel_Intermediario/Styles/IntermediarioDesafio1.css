@@ -1,0 +1,29 @@
+.desafio4-page {
+  min-height: 100vh;
+  width: 100%;
+
+  /* --- MUDANÇA AQUI --- */
+  /* Removemos o bege e aplicamos o gradiente da paleta Dark */
+  background: linear-gradient(135deg, #1b1e30 0%, #2d3250 100%);
+
+  /* Se preferir uma cor sólida, use: background-color: #2D3250; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.desafio4-footer {
+  margin-top: 30px;
+
+  /* --- MUDANÇA AQUI --- */
+  /* O texto #444 (cinza escuro) sumiria no fundo escuro. 
+     Usamos o Periwinkle (#7077A1) ou Branco com opacidade. */
+  color: #7077a1;
+
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}

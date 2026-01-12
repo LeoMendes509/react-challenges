@@ -126,7 +126,7 @@ const LoginForm = () => {
         </Box>
       </form>
 
-      {/* ÁREA DE TESTE (Pra gente ver funcionando) */}
+      {/* ÁREA DE TESTE */}
       <Box
         sx={{
           marginTop: 3,

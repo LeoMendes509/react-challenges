@@ -1,0 +1,92 @@
+/* src/components/Challenges/Level_Beginner/Challenge1/Counter.module.css */
+
+/* PALETA: #222831 (Fundo), #393E46 (Card), #948979 (Detalhe), #DFD0B8 (Texto) */
+
+.container {
+  /* O SEGREDO DO FUNDO TOTAL 👇 */
+  min-height: 100vh; /* Ocupa 100% da altura da janela visível */
+  width: 100%; /* Ocupa 100% da largura */
+  margin: 0; /* Sem margens externas */
+
+  background-color: #222831; /* Cor de fundo CHUMBO ESCURO (Industrial) */
+
+  /* Centralização do Card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Espaço interno para o card não colar na borda em telas pequenas */
+  box-sizing: border-box; /* Garante que o padding não estoure a largura */
+}
+
+.card {
+  width: 100%;
+  max-width: 450px; /* Trava largura no PC */
+
+  /* Cor do Card (Um pouco mais claro que o fundo) */
+  background-color: #393e46;
+  border: 1px solid #948979;
+  border-radius: 16px;
+
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Sombra suave para destacar o card do fundo */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  color: #dfd0b8;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.2;
+
+  /* Texto responsivo (aumenta/diminui sozinho) */
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.description {
+  color: #948979;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.counterValue {
+  font-weight: 900;
+  color: #dfd0b8;
+  font-family: monospace;
+  margin: 20px 0 40px 0;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+
+  /* Número gigante responsivo */
+  font-size: clamp(4rem, 15vw, 7rem);
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* AJUSTES PARA CELULAR */
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Ajuste fino para não colar no topo em celulares pequenos */
+  .container {
+    padding-top: 60px;
+    justify-content: flex-start; /* Em telas muito pequenas, começa do topo */
+  }
+}

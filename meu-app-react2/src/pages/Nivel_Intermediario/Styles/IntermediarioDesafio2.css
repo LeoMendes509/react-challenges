@@ -1,0 +1,22 @@
+.hook-form-page {
+  min-height: 100vh;
+  width: 100%;
+
+  /* Fundo Roxo Muito Escuro (#2A2438) */
+  background-color: #2a2438;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hook-form-footer {
+  margin-top: 30px;
+  /* Lilás Claro (#DBD8E3) */
+  color: #dbd8e3;
+  opacity: 0.5;
+  text-align: center;
+  font-size: 0.85rem;
+}
