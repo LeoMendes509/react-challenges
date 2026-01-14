@@ -54,7 +54,7 @@ const FinalProjectPage = () => {
   const { addNotification, notifications, clearNotifications } =
     useNotification();
 
-  // --- HANDLERS DE NOTIFICAÇÃO ---
+  // --- HANDLERS DE NOTIFICAÇÃO --
   const handleNotificationClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
