@@ -1,12 +1,15 @@
 import React from "react";
+import { AppProviders } from "./providers/Final_Project/AppProviders";
 import AppRoutes from "./routes/AppRoutes";
 import "./styles/global.css";
 
 function App() {
   return (
-    <div>
-      <AppRoutes />
-    </div>
+    <AppProviders>
+      <div>
+        <AppRoutes />
+      </div>
+    </AppProviders>
   );
 }
 

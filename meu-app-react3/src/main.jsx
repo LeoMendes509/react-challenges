@@ -4,8 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 // Importando os Provedores (As "Usinas")
-import { ThemeProvider } from "./providers/ThemeProvider";
-import { UserProvider } from "./providers/UserProvider";
+import { ThemeProvider } from "./providers/Challenge5/ThemeProvider";
+import { UserProvider } from "./providers/Challenge6/UserProvider";
 
 // Importando CSS Global
 import "./styles/global.css";

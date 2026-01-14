@@ -14,14 +14,21 @@ import Challenge5Page from "../pages/Level_Intermediate/Challenge5/Challenge5Pag
 import Challenge6Page from "../pages/Level_Intermediate/Challenge6/Challenge6Page";
 import Challenge7Page from "../pages/Level_Intermediate/Challenge7/Challenge7Page";
 import Challenge8Page from "../pages/Level_Intermediate/Challenge8/Challenge8Page";
+import Challenge9Page from "../pages/Level_Intermediate/Challenge9/Challenge9Page";
+import Challenge10Page from "../pages/Level_Intermediate/Challenge10/Challenge10Page";
 // --- MÓDULO 3: NÍVEL AVANÇADO ---
+import Challenge11Page from "../pages/Level_Advanced/Challenge11/Challenge11Page";
+import Challenge12Page from "../pages/Level_Advanced/Challenge12/Challenge12Page";
+import Challenge13Page from "../pages/Level_Advanced/Challenge13/Challenge13Page";
+import Challenge14Page from "../pages/Level_Advanced/Challenge14/Challenge14Page";
+// --- MÓDULO 3: NÍVEL AVANÇADO ---
+import FinalProjectPage from "../pages/Final_Project/FinalBoss/FinalProjectPage";
 
 const AppRoutes = () => {
   return (
     <Routes>
       {/* --- MENU PRINCIPAL --- */}
       <Route path="/" element={<HomePage />} />
-
       {/* --- NÍVEL INICIANTE --- */}
       <Route path="/beginner/1" element={<Challenge1Page />} />
       <Route path="/beginner/2" element={<Challenge2Page />} />
@@ -32,13 +39,19 @@ const AppRoutes = () => {
       <Route path="/intermediate/6" element={<Challenge6Page />} />
       <Route path="/intermediate/7" element={<Challenge7Page />} />
       <Route path="/intermediate/8" element={<Challenge8Page />} />
+      <Route path="/intermediate/9" element={<Challenge9Page />} />
+      <Route path="/intermediate/10" element={<Challenge10Page />} />
       {/* --- NÍVEL AVANÇADO --- */}
-
+      <Route path="/advanced/11" element={<Challenge11Page />} />
+      <Route path="/advanced/12" element={<Challenge12Page />} />
+      <Route path="/advanced/13" element={<Challenge13Page />} />
+      <Route path="/advanced/14" element={<Challenge14Page />} />
+      {/* --- DESAFIO FINAL --- */}
+      <Route path="/final-project" element={<FinalProjectPage />} />
       {/* Os Desafios 2, 3 e 4 não estão aqui.
          Então, quando clicar neles, vai cair na rota "*" abaixo.
       */}
-
-      {/* --- ROTA CORINGA (404 / EM CONSTRUÇÃO) --- */}
+      0/* --- ROTA CORINGA (404 / EM CONSTRUÇÃO) ---
       <Route
         path="*"
         element={

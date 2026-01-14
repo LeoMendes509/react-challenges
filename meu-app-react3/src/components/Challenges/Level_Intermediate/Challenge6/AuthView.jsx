@@ -25,7 +25,7 @@ import {
   Badge,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "../../../../hooks/useUser";
+import { useUser } from "../../../../hooks/Challenge6/useUser";
 
 const colors = {
   bg: "#000000",

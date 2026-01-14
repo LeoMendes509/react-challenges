@@ -13,8 +13,7 @@ import { ArrowBack, Settings, Person, Star } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
 // IMPORTANTE: Importe o hook useLocalStorage (O Robô Engenheiro)
-import { useLocalStorage } from "../../../../hooks/useLocalStorage";
-
+import { useLocalStorage } from "../../../../hooks/Challenge8/useLocalStorage";
 const colors = {
   bg: "#000000",
   gold: "#F4DFC8",

@@ -45,11 +45,11 @@ function HomePage() {
           <Link to="/intermediate/8" className={styles.challengeBtn}>
             8. ToggleView
           </Link>
-          <Link to="/intermediate/8" className={styles.challengeBtn}>
-            9. ToggleView
+          <Link to="/intermediate/9" className={styles.challengeBtn}>
+            9. useDebounce
           </Link>
-          <Link to="/intermediate/8" className={styles.challengeBtn}>
-            10. ToggleView
+          <Link to="/intermediate/10" className={styles.challengeBtn}>
+            10. useListView
           </Link>
         </div>
 
@@ -58,6 +58,9 @@ function HomePage() {
         <div className={styles.buttonsGrid}>
           <Link to="/advanced/11" className={styles.challengeBtn}>
             11. Shopping Cart
+          </Link>
+          <Link to="/advanced/12" className={styles.challengeBtn}>
+            12. MultiContextView
           </Link>
           <Link to="/advanced/13" className={styles.challengeBtn}>
             13. useForm
